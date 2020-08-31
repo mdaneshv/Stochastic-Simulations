@@ -11,12 +11,11 @@ from mpl_toolkits import mplot3d
 from scipy.special import gamma
 from sklearn.neighbors import KernelDensity 
 from sklearn.model_selection import GridSearchCV
-In [2]:
-@jit
+
 def ratio(x,mu,sigma,df,c):
     return t.pdf(x,df)/(c*norm.pdf(x,mu,sigma)) 
 
-@jit
+
 def rejection_sampling1(L,c,mu,sigma,df):
     y=np.zeros(L)
     i=0
@@ -29,7 +28,7 @@ def rejection_sampling1(L,c,mu,sigma,df):
             i+=1  
     return y,j        
 
-@jit
+
 def rejection_sampling2(L,c,mu,sigma,df):
     y=np.zeros(L)
     i=j=0
@@ -43,7 +42,7 @@ def rejection_sampling2(L,c,mu,sigma,df):
             i+=1  
     return y,c,j 
 
-@jit
+
 def sup_norm(y,z,z_min,z_max):
     grid = GridSearchCV(KernelDensity(),{'bandwidth': np.linspace(0.1, 1.0, 30)},cv=10)
     grid.fit(y[:,None])
@@ -52,7 +51,7 @@ def sup_norm(y,z,z_min,z_max):
     pdf_kde = np.exp(kde.score_samples(z_grid[:,None])) 
     error = np.max(np.absolute(np.subtract(z,pdf_kde)))
     return error
-In [3]:
+
 #Description of target and candidate distribution
 mu=0
 sigma=2
@@ -74,7 +73,7 @@ plt.gca().spines['top'].set_color('none')
 plt.title('Candidate (normal) and target (t) distributions',y=1.05)
 plt.show()
 
-In [5]:
+
 L=[10,100,1000]
 c=[3,6,9]
 M=len(c)   #M is length of vector c
@@ -135,7 +134,7 @@ plt.title('Distance between the true and estimated densities',y=1.05)
 plt.show()
 
 
-In [6]:
+
 mu=0
 sigma=[2,10,20]
 df=2
@@ -165,7 +164,7 @@ plt.suptitle('Effect of candidate distribution',y=1.1)
 plt.tight_layout(h_pad=0.1,w_pad=0.5)  
 plt.show()
 
-In [8]:
+
 mu=0
 sigma=2
 df=2
@@ -200,8 +199,8 @@ f.suptitle('Density estimates using rejection sampling 2',y=1.05)
 plt.show()
 #f.savefig('algorithm2.png', format='png', dpi=500,bbox_inches="tight")
 
-Multivariate version
-In [12]:
+
+#### Multivariate Version
 def plot_density(X,Y,z):
     fig = plt.figure()
     ax = plt.axes(projection="3d")
@@ -246,7 +245,7 @@ def plot_contour(X,Y,z,sample):
     axes[1].text(1,2,f'run time =\n%1.2f sec.' %(stop-start),fontsize=9)
     axes[i].text(1,1,f'accept rate=\n%1.2f' %(L/iteration),fontsize=9)
 
-@jit
+
 def t_pdf(x,mu,df,sigma):
     p=np.shape(sigma)[1]
     ex=p/2
@@ -255,11 +254,11 @@ def t_pdf(x,mu,df,sigma):
     C=(1+((1/df)*np.dot(np.dot((x-mu),np.linalg.inv(sigma)),np.transpose(x-mu))))**(-(df+p)/2)
     return A*C/B
 
-@jit
+
 def twod_ratio(x,df,mu_t,mu_normal,cov_t,cov_normal,c):
     return t_pdf(x,mu_t,df,cov_t)/(c*multivariate_normal.pdf(x,mu_normal,cov_normal)) 
 
-@jit
+
 def twod_rejection_sampling_1(df,mu_t,mu_normal,cov_t,cov_normal,c,L):
     y=np.zeros([len(mu_t),L])
     i=j=0
@@ -271,7 +270,7 @@ def twod_rejection_sampling_1(df,mu_t,mu_normal,cov_t,cov_normal,c,L):
             i+=1  
     return y,j 
 
-@jit
+
 def twod_rejection_sampling_2(df,mu_t,mu_normal,cov_t,cov_normal,c,L):
     y=np.zeros([len(mu_t),L+1])
     i=j=0
@@ -288,7 +287,7 @@ def twod_rejection_sampling_2(df,mu_t,mu_normal,cov_t,cov_normal,c,L):
                 y[:,i+1]=prop
                 i+=1           
     return y,j
-In [13]:
+
 mu_t = np.array([0, 0])
 mu_normal = np.array([0, 0])
 cov_normal = np.array([[2, 0], [0, 2]])
@@ -314,7 +313,7 @@ plot_samples(sample)
 
 
 
-In [15]:
+
 mu_t = np.array([0, 0])
 mu_normal = np.array([0, 0])
 cov_normal = np.array([[2, 0], [0, 2]])
