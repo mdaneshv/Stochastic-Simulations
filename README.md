@@ -12,4 +12,6 @@ Links to open the ipynb files using nbviewer:
 
 4- Yule Process: https://nbviewer.jupyter.org/github/mdaneshv/Stochastic-Simulations/blob/master/Yule%20Process-incremental%20sampling.ipynb
 
-5- wright-fisher and Moran process: https://nbviewer.jupyter.org/github/mdaneshv/Stochastic-Simulations/blob/master/Wright-Fisher-Moran.ipynb
+5- Wright-Fisher and Moran process: https://nbviewer.jupyter.org/github/mdaneshv/Stochastic-Simulations/blob/master/Wright-Fisher-Moran.ipynb
+
+6- 
