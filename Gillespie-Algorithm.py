@@ -1,10 +1,12 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 plt.style.use('ggplot')
+
 
 def Gillespie_lotka_volterra(X0, Y0, c1, c2, c3,
                              max_steps, num_sim):
@@ -97,4 +99,3 @@ def second_model_plots(X0, Y0, K, a1, a2,
     plt.suptitle(r'Simulation of X and Y trajectory: $k=10,\alpha_1=10^{-6}'\
                  r',\alpha_2=10^{-5},k_a=10^{-5}$', y=1.05)
     plt.tight_layout()
-
