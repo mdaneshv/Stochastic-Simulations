@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[10]:
-
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -13,8 +11,7 @@ plt.style.use('seaborn')
 
 def transition_matrix(N, mu_a, mu_A, 
                       f, g):
-    
-    '''
+     '''
     N -- population size
     mu_a, mu_A are mutation rates
     and f, g are fitnesses for 
@@ -75,15 +72,15 @@ def fixation_plots(pop_vec, pows, fit_vec, x0):
             ax[i,0].set_ylabel('N={}'.format(N), fontsize=14)   
             ax[i,j].legend(['$Prob[X_k={}|x_0=1]$'.format(N)], fontsize=10)
             if i==0:
-                ax[i,j].text(200,0.1,'Mean time to fixtaion\n= %1.1f'                             %mean_time, fontsize=9)
+                ax[i,j].text(200,0.1,'Mean time to fixtaion\n= %1.1f' %mean_time, fontsize=9)
             elif i==1:
-                ax[i,j].text(400,0.07,'Mean time to fixtaion\n= %1.1f'                             %mean_time, fontsize=9)
+                ax[i,j].text(400,0.07,'Mean time to fixtaion\n= %1.1f' %mean_time, fontsize=9)
             else:
-                ax[i,j].text(1000,0.03,'Mean time to fixtaion\n=  %1.1f'
-                             %mean_time, fontsize=9)
+                ax[i,j].text(1000,0.03,'Mean time to fixtaion\n=  %1.1f' %mean_time, fontsize=9)
             ax[i,j].set_ylim([0,1/N + 0.01])
             ax[i,j].set_yticks(np.linspace(0,1/N,5))     
-            plt.suptitle('First Plot: $Prob[X_{k}=N | x_{0}=1]$ versus'                         ' $k\,(steps)$ for different values of $N$',y=1.05) 
+            plt.suptitle('First Plot: $Prob[X_{k}=N | x_{0}=1]$ versus'\
+                         ' $k\,(steps)$ for different values of $N$',y=1.05) 
             plt.tight_layout()
             
             
@@ -106,14 +103,15 @@ def stationary_plots(N, mut_vec, pows, fit_vec):
             state_frequency = steady_state_approx * samples
             mean_state = np.dot(state_frequency, np.arange(N+1))/samples
             ax[i,j].bar(np.arange(N+1), state_frequency)
-            ax[i,j].axvline(x=mean_state, ymin=0, ymax=0.95, linestyle='dashed',                            color ='green', label='Mean')
+            ax[i,j].axvline(x=mean_state, ymin=0, ymax=0.95, linestyle='dashed', color ='green', label='Mean')
             ax[0,j].set_title('(f,g)={}'.format((f,g)), fontsize=12)
             ax[-1,j].set_xlabel('states', fontsize=12)
             ax[i,0].set_ylabel('$\mu_a$=$\mu_A$={}'.format(mu_a), fontsize=12)  
             ax[i,j].legend()
             ax[i,j].set_ylim([0,max(state_frequency)+30])  
             plt.tight_layout()          
-            plt.suptitle('Second Plot: Frequncy of states at stationary for N=20'                         ' in 1000 samples' ,y=1.05)  
+            plt.suptitle('Second Plot: Frequncy of states at stationary for N=20'\
+                         ' in 1000 samples' ,y=1.05)  
             
 
 
@@ -137,4 +135,3 @@ stationary_plots(N, mut_vec, pows, fit_vec)
 # timing        
 end = timeit.default_timer()
 print('run time = %1.2f sec.'%(end-start))
-
