@@ -152,7 +152,9 @@ def MCMC_Rejection_Plots(x0, delta, mu, v, s:list):
         ax[i].text(-6,0.25,'number of simulations={}'.format(num_samples), fontsize=12)
         ax[i].set_ylabel('KDE', fontsize=14)
         ax[i].set_xlim([-8,8])
-        plt.suptitle('Comparison between MCMC and rejection sampling,\n for MCMC:'                    r' $\delta=1$ and for rejection sampling: $\mu=0,\,\sigma^2=3$'                     ' and $c\approx1.25$',y=1.05)
+        plt.suptitle('Comparison between MCMC and rejection sampling,\n for MCMC:'\
+                     r' $\delta=1$ and for rejection sampling: $\mu=0,\,\sigma^2=3$'\
+                     ' and $c\approx1.25$', y=1.05)
         plt.tight_layout()  
       
     
