@@ -14,4 +14,4 @@ Links to open the ipynb files using nbviewer:
 
 5- Wright-Fisher and Moran process: https://nbviewer.jupyter.org/github/mdaneshv/Stochastic-Simulations/blob/master/Wright-Fisher-Moran.ipynb
 
-6- 
+6- Pathogen Mutation: https://nbviewer.jupyter.org/github/mdaneshv/Stochastic-Simulations/blob/master/Pathogen-Mutation.ipynb
