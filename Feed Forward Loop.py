@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
-
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.offsetbox import AnchoredText
@@ -79,7 +76,7 @@ def Euler_method(dt, t1, n_steps, By, Bz,
     return [Y1, Z1, Y2, Z2, resp_time1, resp_time2]
 
 
-def plots(dt, t1, n_steps, By, Bz,
+def solve_and_plots(dt, t1, n_steps, By, Bz,
           ay, az, by, bz,
           Kxz, Kxy, K,
           h, Y0, Z0):
@@ -136,8 +133,7 @@ Kxz, Kxy, h = 0.1, 0.1, 2
 Y0, Z0 = 2, 2
 K = [0.01,10]
 
-plots(dt, t1, n_steps, By, Bz,
+solve_and_plots(dt, t1, n_steps, By, Bz,
       ay, az, by, bz,
       Kxz, Kxy, K,
       h, Y0, Z0)            
-
