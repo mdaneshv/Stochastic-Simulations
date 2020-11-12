@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[6]:
-
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -46,13 +44,25 @@ def increment_sampling_plots(b, N, P0, deg, num_sim):
         ax[0,i].plot(s[0,:], X1[0,:], color=col[i], **marker_style)
         sns.distplot(inc, ax=ax[1,i], bins=np.linspace(0,0.1,100), kde=False)
         ax[0,i].set_title(r'$\nu_n \propto n^{%1.1f}$'%d)
-        ax[1,i].set_title(r'distribution of increments: $\nu_n\propto'                          ' n^{%1.1f}$'%d, fontsize=10)
+        ax[1,i].set_title(r'distribution of increments: $\nu_n\propto'\
+                          ' n^{%1.1f}$'%d, fontsize=10)
         ax[0,0].set_ylabel('population size',fontsize=12)
         ax[0,1].set_xlabel('time',fontsize=12)
         ax[1,i].set_xlim([0,0.03])
-        plt.suptitle('Incremental sampling with different rates:\n'                     ' explosion occurs in a finite time when the power'                     ' of n exceeds 1', y=1.05)  
+        plt.suptitle('Incremental sampling with different rates:\n'\
+                     ' explosion occurs in a finite time when the power'\
+                     ' of n exceeds 1', y=1.05)  
         plt.tight_layout(h_pad=8,w_pad=2)
         
+
+# Plots for incremental sampling        
+b = 0.5
+N = 2000
+P0 = 1
+deg = [1, 1.5, 2]
+num_sim = 1
+increment_sampling_plots(b, N, P0, deg, num_sim) 
+
 
 def tau_leaping(b, tau, P0,
                 num_steps, num_sim):
@@ -85,13 +95,23 @@ def tau_leaping_plots(b, tau, P0, num_steps, num_sim):
     y = exact_mean(b, P0, t)
     ax.plot(t, X2_aver, color=col[0], label='tau_leaping')
     ax.plot(t, y, color=col[1], label='exact mean')
-    ax.set_title('Comparison between tau-leaping simulations'                 ' and deterministic method for the linear growth', y=1.03) 
+    ax.set_title('Comparison between tau-leaping simulations'\
+                 ' and deterministic method for the linear growth', y=1.03) 
     ax.text(2,100, r"$\nu_n = 0.5\,n$", style = 'italic', fontsize=12)
     ax.legend(['mean from tau-leaping',' mean from deterministic method'])
     ax.set_xlabel('time', fontsize=12)
     ax.set_ylabel('population mean', fontsize=12)  
     plt.tight_layout()
     
+
+# Plots for tau_leaping method
+b = 0.5
+tau = 0.01
+P0 = 1 
+num_steps = 1000
+num_sim = 1000
+tau_leaping_plots(b, tau, P0, num_steps, num_sim) 
+
 
 def tau_leaping_hist(b, tau, P0,
                      num_steps, num_sim):
@@ -104,7 +124,17 @@ def tau_leaping_hist(b, tau, P0,
     ax.text(600,0.0035, r"$\tau=0.01,\,t =10$", style = 'italic' , size=12)
     ax.set_xlabel('population size',fontsize=12)
     ax.set_ylabel('KDE',fontsize=12)
-    plt.title(r'Kernel density estimation for population size at time'                 r' $t=10$', va='center', ha='center',y=1.03) 
+    plt.title(r'Kernel density estimation for population size at time'\
+              r' $t=10$', va='center', ha='center',y=1.03)
+    
+    
+# Histograms for tau_leaping method
+b = 0.5
+tau = 0.01
+P0 = 1 
+num_steps = 1000
+num_sim = 1000
+tau_leaping_hist(b, tau, P0, num_steps, num_sim)  
        
 
 def trajectories(b, tau, P0,
@@ -125,15 +155,6 @@ def trajectories(b, tau, P0,
                   , va='center', ha='center',y=1.03) 
 
         
-# Plots for incremental sampling        
-b = 0.5
-N = 2000
-P0 = 1
-deg = [1, 1.5, 2]
-num_sim = 1
-increment_sampling_plots(b, N, P0, deg, num_sim)
-
-
 # Plots for trajectories
 b = 0.5
 tau = 0.01
@@ -141,22 +162,3 @@ P0 = 1
 num_steps = 1000
 num_sim = 4
 trajectories(b, tau, P0, num_steps, num_sim)
-
-
-# Histograms for tau_leaping method
-b = 0.5
-tau = 0.01
-P0 = 1 
-num_steps = 1000
-num_sim = 1000
-tau_leaping_hist(b, tau, P0, num_steps, num_sim)    
-
-
-# Plots for tau_leaping method
-b = 0.5
-tau = 0.01
-P0 = 1 
-num_steps = 1000
-num_sim = 1000
-tau_leaping_plots(b, tau, P0, num_steps, num_sim)            
-
