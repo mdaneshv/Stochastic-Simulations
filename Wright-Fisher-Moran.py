@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[34]:
-
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -21,6 +19,7 @@ def Fokker_Planck_Equation(x, N, u, v, s):
     """
     return np.power(x, N*v - 1)*np.power((1 - x), (N*u - 1))*np.exp(N*s*x)
 
+
 @jit
 def Fokker_Planck_Mean(x, N, u, v, s):
     """
@@ -28,12 +27,14 @@ def Fokker_Planck_Mean(x, N, u, v, s):
     """
     return x*np.power(x, N*v - 1)*np.power((1 - x), (N*u - 1))*np.exp(N*s*x)
 
+
 @jit
 def Fixation_Prob_Moran(N, w_a, w_A):
     """
     Returns an approximation for fixation probability for Moran process.
     """
     return ((w_A/w_a) - 1)/(np.power(w_A/w_a, N) - 1)
+
 
 @jit
 def Fixation_Prob_Fisher(N, s):
@@ -151,4 +152,3 @@ plt.ylabel('fixation probability at N')
 plt.ylim([-0.01,0.3])
 plt.legend()
 plt.show()
-
