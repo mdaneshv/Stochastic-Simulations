@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
-
-
 import numpy as np
 import random
 import matplotlib.pyplot as plt
@@ -13,9 +10,10 @@ from scipy.stats import t,norm,uniform
 from matplotlib.offsetbox import AnchoredText
 plt.style.use('ggplot')
 
+
 def Markov_Monte_Carlo(x0, delta, num_samples):
     """
-    returns samples from t-distribution
+    Returns samples from t-distribution
     using Metropolis-Hastings algorithim
     and an uniform distribution.
     """
@@ -77,7 +75,7 @@ def Supremum(mu, sigma):
 
 def Rejection_Sampling1(mu, sigma, num_sim):
     """
-    Returns samples of t-distribution using
+    Returns samples of a t-distribution using
     rejection sampling method and a fixed 
     prob of acceptance. Candidate density is
     a normal distribution.
@@ -113,8 +111,8 @@ def Rejection_Sampling2(mu, sigma, c0, num_sim):
 
 def Rejection_Comparison_Plots(mu, var_vec, c0, num_sim):
     
-    """It compares both methods for rejection sampling."""
-    
+     """It compares both methods for rejection sampling."""
+        
     fig, ax = plt.subplots(len(var_vec),2, figsize=(12,10))
     x = np.linspace(-8,8,num_sim)
     for i, v in enumerate(var_vec):
@@ -156,7 +154,8 @@ def MCMC_Rejection_Plots(x0, delta, mu, v, s:list):
         ax[i].set_xlim([-8,8])
         plt.suptitle('Comparison between MCMC and rejection sampling,\n for MCMC:'                    r' $\delta=1$ and for rejection sampling: $\mu=0,\,\sigma^2=3$'                     ' and $c\approx1.25$',y=1.05)
         plt.tight_layout()  
-        
+      
+    
 # An Example
 x0 = 0
 delta = 1  
@@ -165,4 +164,3 @@ v = 3
 s = [5000, 10000, 50000]
 
 MCMC_Rejection_Plots(x0, delta, mu, v, s)        
-
