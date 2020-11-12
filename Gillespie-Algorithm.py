@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[8]:
-
-
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -97,6 +94,7 @@ def second_model_plots(X0, Y0, K, a1, a2,
     ax[1].set_xlabel(r'time increments ($\tau$)')
     ax[0].set_ylabel('X Concentration')
     ax[1].set_ylabel('Y Concentration')
-    plt.suptitle(r'Simulation of X and Y trajectory: $k=10,\alpha_1=10^{-6}'                 r',\alpha_2=10^{-5},k_a=10^{-5}$', y=1.05)
+    plt.suptitle(r'Simulation of X and Y trajectory: $k=10,\alpha_1=10^{-6}'\
+                 r',\alpha_2=10^{-5},k_a=10^{-5}$', y=1.05)
     plt.tight_layout()
 
