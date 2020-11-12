@@ -125,7 +125,7 @@ def solve_and_plots(dt, t1, n_steps, By, Bz,
             plt.figtext(0.5,0.45, "Case 2", ha="center", va="top", fontsize=18, color="r")
             plt.savefig('1.png')
             
-# Examples
+# Plots
 dt, t1, n_steps = 0.005, 2000, 6000
 By, Bz, ay =  0, 0, 1
 az, by, bz = 1, 1, 1
