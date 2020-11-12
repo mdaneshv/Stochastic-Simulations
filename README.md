@@ -6,7 +6,7 @@ Links to open the ipynb files using nbviewer:
 
 1- Feed Forward Loop: https://nbviewer.jupyter.org/github/mdaneshv/Stochastic-Simulations/blob/master/Feed-Forward-Loop.ipynb
 
-2- Gillespie Algorithm: https://nbviewer.jupyter.org/github/mdaneshv/Stochastic-Simulations/blob/master/Gillespie%20algorithm.ipynb
+2- Gillespie Algorithm: https://nbviewer.jupyter.org/github/mdaneshv/Stochastic-Simulations/blob/master/Gillespie-Algorithm.ipynb
 
 3- Markov chain Monte Carlo: https://nbviewer.jupyter.org/github/mdaneshv/Stochastic-Simulations/blob/master/Markov-chain-Monte-Carlo.ipynb
 
