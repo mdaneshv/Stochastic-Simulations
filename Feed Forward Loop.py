@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.offsetbox import AnchoredText
@@ -28,6 +29,7 @@ def solve_ode(By, Bz, ay, az, by, bz,
     
     return [dY1, dZ1, dY2, dZ2]
 
+  
 # Integration 
 def Euler_method(dt, t1, n_steps, By, Bz,
                  ay, az, by, bz, Kxz, Kxy, 
@@ -124,7 +126,8 @@ def solve_and_plots(dt, t1, n_steps, By, Bz,
             plt.figtext(0.5,1.04, "Case 1 ", ha="center", va="top", fontsize=18, color="r")
             plt.figtext(0.5,0.45, "Case 2", ha="center", va="top", fontsize=18, color="r")
             plt.savefig('1.png')
-            
+  
+  
 # Plots
 dt, t1, n_steps = 0.005, 2000, 6000
 By, Bz, ay =  0, 0, 1
