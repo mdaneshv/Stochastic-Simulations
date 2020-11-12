@@ -13,7 +13,8 @@ from cycler import cycler
 plt.style.use('seaborn')
 
     
-def incremental_sampling(b, N, P0, d, num_sim):
+def incremental_sampling(b, N, P0,
+                         d, num_sim):
     """
     b -- birth_rate
     N -- max population 
@@ -35,7 +36,9 @@ def incremental_sampling(b, N, P0, d, num_sim):
         return [s, X1, inc]
     
     
-def increment_sampling_plots(b, N, P0, deg, num_sim):
+def increment_sampling_plots(b, N, P0,
+                             deg, num_sim):
+    
     fig, ax = plt.subplots(2,3,figsize=(12,8))
     marker_style = dict(linestyle=':',marker='o', markersize=4) 
     col = ['cornflowerblue', 'orchid', 'orange']
@@ -61,7 +64,8 @@ N = 2000
 P0 = 1
 deg = [1, 1.5, 2]
 num_sim = 1
-increment_sampling_plots(b, N, P0, deg, num_sim) 
+increment_sampling_plots(b, N, P0,
+                         deg, num_sim) 
 
 
 def tau_leaping(b, tau, P0,
@@ -87,7 +91,9 @@ def exact_mean(b, P0, t):
     return P0*np.exp(b*t)
        
     
-def tau_leaping_plots(b, tau, P0, num_steps, num_sim):
+def tau_leaping_plots(b, tau, P0,
+                      num_steps, num_sim):
+    
     fig, ax = plt.subplots(1, figsize=(10,4))
     col = ['cornflowerblue', 'orchid']
     [X2, X2_aver] = tau_leaping(b, tau, P0, num_steps, num_sim)
@@ -110,14 +116,16 @@ tau = 0.01
 P0 = 1 
 num_steps = 1000
 num_sim = 1000
-tau_leaping_plots(b, tau, P0, num_steps, num_sim) 
+tau_leaping_plots(b, tau, P0,
+                  num_steps, num_sim) 
 
 
 def tau_leaping_hist(b, tau, P0,
                      num_steps, num_sim):
     
     fig, ax = plt.subplots()
-    [X2, X2_aver] = tau_leaping(b, tau, P0, num_steps, num_sim)
+    [X2, X2_aver] = tau_leaping(b, tau, P0, 
+                                num_steps, num_sim)
     sns.distplot(X2[:,num_steps-1], label='tau_leaping', color='orchid')
     ax.legend(['population size: one realization'])
     ax.text(600,0.004, r"$\nu_n=0.5\,n$", style = 'italic' , size=12)
@@ -134,7 +142,8 @@ tau = 0.01
 P0 = 1 
 num_steps = 1000
 num_sim = 1000
-tau_leaping_hist(b, tau, P0, num_steps, num_sim)  
+tau_leaping_hist(b, tau, P0, 
+                 num_steps, num_sim)  
        
 
 def trajectories(b, tau, P0,
@@ -161,4 +170,5 @@ tau = 0.01
 P0 = 1 
 num_steps = 1000
 num_sim = 4
-trajectories(b, tau, P0, num_steps, num_sim)
+trajectories(b, tau, P0,
+             num_steps, num_sim)
