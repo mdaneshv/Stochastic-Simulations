@@ -10,7 +10,7 @@ Links to open the ipynb files using nbviewer:
 
 3- Markov chain Monte Carlo: https://nbviewer.jupyter.org/github/mdaneshv/Stochastic-Simulations/blob/master/Markov-chain-Monte-Carlo.ipynb
 
-4- Yule Process: https://nbviewer.jupyter.org/github/mdaneshv/Stochastic-Simulations/blob/master/Yule%20Process-incremental%20sampling.ipynb
+4- Yule Process: https://nbviewer.jupyter.org/github/mdaneshv/Stochastic-Simulations/blob/master/Yule-Process.ipynb
 
 5- Wright-Fisher and Moran process: https://nbviewer.jupyter.org/github/mdaneshv/Stochastic-Simulations/blob/master/Wright-Fisher-Moran.ipynb
 
