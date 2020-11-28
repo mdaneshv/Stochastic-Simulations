@@ -1,6 +1,6 @@
 # Stochastic Simulations
 
-Links to open large ipynb files using nbviewer:
+Links to open large jupyter notebook files using nbviewer:
 
 1- Yule Process: https://nbviewer.jupyter.org/github/mdaneshv/Stochastic-Simulations/blob/master/Yule-Process.ipynb
 
