@@ -1,4 +1,4 @@
-# Stochastic Simulations
+# Stochastic Simulations by Mohammad Daneshvar
 
 Codes for stochastic simulations including Markov chain models, Markov chain Monte Carlo, tau-leaping, incremental sampling, rejection sampling, Gillespie algorithm are uploaded in this repository.
 
