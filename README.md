@@ -1,8 +1,6 @@
-# Stochastic Simulations by Mohammad Daneshvar
+# Stochastic Simulations
 
-Codes for stochastic simulations including Markov chain models, Markov chain Monte Carlo, tau-leaping, incremental sampling, rejection sampling, Gillespie algorithm are uploaded in this repository.
-
-Links to open the ipynb files using nbviewer:
+Links to open large ipynb files using nbviewer:
 
 1- Feed Forward Loop: https://nbviewer.jupyter.org/github/mdaneshv/Stochastic-Simulations/blob/master/Feed-Forward-Loop.ipynb
 
