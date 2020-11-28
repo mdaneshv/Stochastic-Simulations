@@ -1,17 +1,16 @@
-# Stochastic Simulations by Mohammad Daneshvar
+# Stochastic Simulations
 
-Codes for stochastic simulations including Markov chain models, Markov chain Monte Carlo, tau-leaping, incremental sampling, rejection sampling, Gillespie algorithm are uploaded in this repository.
+Links to open large jupyter notebook files using nbviewer:
 
-Links to open the ipynb files using nbviewer:
+1- Yule Process: https://nbviewer.jupyter.org/github/mdaneshv/Stochastic-Simulations/blob/master/Yule-Process.ipynb
 
-1- Feed Forward Loop: https://nbviewer.jupyter.org/github/mdaneshv/Stochastic-Simulations/blob/master/Feed-Forward-Loop.ipynb
+2- Markov chain Monte Carlo: https://nbviewer.jupyter.org/github/mdaneshv/Stochastic-Simulations/blob/master/Markov-chain-Monte-Carlo.ipynb
 
-2- Gillespie Algorithm: https://nbviewer.jupyter.org/github/mdaneshv/Stochastic-Simulations/blob/master/Gillespie-Algorithm.ipynb
+3- Pathogen Mutation: https://nbviewer.jupyter.org/github/mdaneshv/Stochastic-Simulations/blob/master/Pathogen-Mutation.ipynb
 
-3- Markov chain Monte Carlo: https://nbviewer.jupyter.org/github/mdaneshv/Stochastic-Simulations/blob/master/Markov-chain-Monte-Carlo.ipynb
+4- Feed Forward Loop: https://nbviewer.jupyter.org/github/mdaneshv/Stochastic-Simulations/blob/master/Feed-Forward-Loop.ipynb
 
-4- Yule Process: https://nbviewer.jupyter.org/github/mdaneshv/Stochastic-Simulations/blob/master/Yule-Process.ipynb
+5- Gillespie Algorithm: https://nbviewer.jupyter.org/github/mdaneshv/Stochastic-Simulations/blob/master/Gillespie-Algorithm.ipynb
 
-5- Wright-Fisher and Moran process: https://nbviewer.jupyter.org/github/mdaneshv/Stochastic-Simulations/blob/master/Wright-Fisher-Moran.ipynb
+6- Wright-Fisher and Moran process: https://nbviewer.jupyter.org/github/mdaneshv/Stochastic-Simulations/blob/master/Wright-Fisher-Moran.ipynb
 
-6- Pathogen Mutation: https://nbviewer.jupyter.org/github/mdaneshv/Stochastic-Simulations/blob/master/Pathogen-Mutation.ipynb
