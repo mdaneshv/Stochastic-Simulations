@@ -1,4 +1,5 @@
 # Stochastic Simulations
+# There are .py files their corresponding .ipynb files. For visualization please also see .ipynb files. 
 
 Links to open large jupyter notebook files using nbviewer:
 
