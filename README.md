@@ -13,5 +13,7 @@ Links to open large jupyter notebook files using nbviewer:
 
 5- Gillespie Algorithm: https://nbviewer.jupyter.org/github/mdaneshv/Stochastic-Simulations/blob/master/Gillespie-Algorithm.ipynb
 
+6- Moran Process: https://nbviewer.jupyter.org/github/mdaneshv/Stochastic-Simulations/blob/master/Markov-chain-Moran-model.ipynb
+
 6- Wright-Fisher and Moran process: https://nbviewer.jupyter.org/github/mdaneshv/Stochastic-Simulations/blob/master/Wright-Fisher-Moran.ipynb
 
