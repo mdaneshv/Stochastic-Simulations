@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
-
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -14,9 +12,6 @@ from termcolor import colored
 plt.style.use('seaborn')
 
 
-# In[ ]:
-
-
 def hamming_distance(list1, list2):
     
     dist = 0
@@ -24,9 +19,6 @@ def hamming_distance(list1, list2):
         if list1[n] != list2[n]:
             dist += 1
     return dist
-
-
-# In[ ]:
 
 
 def linear_mutation_model(population_size, h_thr, z,
@@ -101,12 +93,10 @@ def linear_mutation_plots(population_size, hvec, zvec,
             ax[i,0].set_ylabel('z=%1.1f' %z, fontsize=14, fontweight='bold')
             fig.text(-0.02, 0.5, 'fraction infected ($p_t$)', va='center',
                      rotation='vertical', fontsize=18)
-            plt.suptitle('Different behavior of $p_t$ with different parameters',                         y=1.05, color='purple', fontsize=18, fontweight='bold')
+            plt.suptitle('Different behavior of $p_t$ with different parameters', 
+                         y=1.05, color='purple', fontsize=18, fontweight='bold')
             plt.tight_layout()
             plt.savefig('p1.png')
-
-
-# In[ ]:
 
 
 def fraction_infected(tau, z, T):
@@ -144,17 +134,15 @@ def plots(tauvec, zvec, T):
             ax[i,0].set_ylabel('z=%1.1f' %z, fontsize=14, fontweight='bold')
             fig.text(-0.02, 0.5, 'fraction infected ($p_t$)', va='center',
                      rotation='vertical', fontsize=18)
-            plt.suptitle('Different behavior of $p_t$ with different parameters',                         y=1.05, color='purple', fontsize=18, fontweight='bold')
+            plt.suptitle('Different behavior of $p_t$ with different parameters', 
+                         y=1.05, color='purple', fontsize=18, fontweight='bold')
             plt.tight_layout()
             plt.savefig('p5.png')
             
 
 
-# In[ ]:
-
-
 """Solve and plot"""
-
+# Stochastic simulations
 hvec = [4, 5, 6]
 zvec = [1, 2, 3, 4] 
 population_size = 10**4
@@ -166,10 +154,9 @@ linear_mutation_plots(population_size, hvec, zvec,
                       str_leng, max_time)
 
 
-
+# Solution of Difference Equations
 T  = 400
 tauvec = [4, 5, 6]
 zvec = [1, 2, 3, 4] 
 
 plots(tauvec, zvec, T)
-
