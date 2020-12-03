@@ -15,5 +15,5 @@ Links to open large jupyter notebook files using nbviewer:
 
 6- Moran Process: https://nbviewer.jupyter.org/github/mdaneshv/Stochastic-Simulations/blob/master/Markov-chain-Moran-model.ipynb
 
-6- Wright-Fisher and Moran process: https://nbviewer.jupyter.org/github/mdaneshv/Stochastic-Simulations/blob/master/Wright-Fisher-Moran.ipynb
+7- Wright-Fisher and Moran process: https://nbviewer.jupyter.org/github/mdaneshv/Stochastic-Simulations/blob/master/Wright-Fisher-Moran.ipynb
 
