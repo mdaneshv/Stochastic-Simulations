@@ -1,4 +1,3 @@
-# Stochastic Simulations
 # This repo includes .py files as well as their corresponding .ipynb files. For visualization please also see .ipynb files. 
 
 Links to open jupyter notebook files using nbviewer:
