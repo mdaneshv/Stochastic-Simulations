@@ -1,7 +1,6 @@
-# Stochastic Simulations
 # This repo includes .py files as well as their corresponding .ipynb files. For visualization please also see .ipynb files. 
 
-Links to open large jupyter notebook files using nbviewer:
+Links to open jupyter notebook files using nbviewer:
 
 1- Yule Process: https://nbviewer.jupyter.org/github/mdaneshv/Stochastic-Simulations/blob/master/Yule-Process.ipynb
 
@@ -13,5 +12,7 @@ Links to open large jupyter notebook files using nbviewer:
 
 5- Gillespie Algorithm: https://nbviewer.jupyter.org/github/mdaneshv/Stochastic-Simulations/blob/master/Gillespie-Algorithm.ipynb
 
-6- Wright-Fisher and Moran process: https://nbviewer.jupyter.org/github/mdaneshv/Stochastic-Simulations/blob/master/Wright-Fisher-Moran.ipynb
+6- Moran Process: https://nbviewer.jupyter.org/github/mdaneshv/Stochastic-Simulations/blob/master/Markov-chain-Moran-model.ipynb
+
+7- Wright-Fisher and Moran process: https://nbviewer.jupyter.org/github/mdaneshv/Stochastic-Simulations/blob/master/Wright-Fisher-Moran.ipynb
 
